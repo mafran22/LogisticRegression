@@ -6,6 +6,9 @@ import joblib
 import mlflow
 import mlflow.sklearn
 
+mlruns_path = os.path.join(os.getcwd(), "mlruns")
+mlflow.set_tracking_uri(f"file://{mlruns_path}")
+
 def load_data():
     from sklearn.datasets import load_iris
     iris = load_iris(as_frame=True)
