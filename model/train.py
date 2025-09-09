@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 import mlflow
 import mlflow.sklearn
+import os
 
 mlruns_path = os.path.join(os.getcwd(), "mlruns")
 mlflow.set_tracking_uri(f"file://{mlruns_path}")
